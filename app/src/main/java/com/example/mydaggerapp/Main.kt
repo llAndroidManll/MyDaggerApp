@@ -1,19 +1,13 @@
 package com.example.mydaggerapp
 
-import com.example.mydaggerapp.dagger.Car
-import com.example.mydaggerapp.dagger.CarComponent
-import com.example.mydaggerapp.dagger.DaggerCarComponent
-import com.example.mydaggerapp.dagger.EngineModule
+import com.example.mydaggerapp.dagger.DaggerAppComponent
+
 
 fun main() {
     println("Hello!")
 
-    val carComponent = DaggerCarComponent.create();
+    val appComponent = DaggerAppComponent.create()
 
-    val car = Car(EngineModule.provideEngine()) // Create an instance of Car
+    println(appComponent.computer)
 
-    // Inject dependencies into the car instance
-    carComponent.inject(car)
-
-    car.start()
 }
