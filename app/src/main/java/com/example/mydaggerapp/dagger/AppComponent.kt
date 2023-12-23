@@ -7,5 +7,7 @@ interface AppComponent {
 
     val computer: Computer
 
+    fun inject(computer: Computer)
+
 
 }
